@@ -1,0 +1,559 @@
+<project name="pscad_socket" version="4.5.4" schema="0" Target="Library">
+  <paramlist name="Settings">
+    <param name="creator" value="Qiuhua, 1370453724" />
+    <param name="time_duration" value="0.5" />
+    <param name="time_step" value="50" />
+    <param name="sample_step" value="250" />
+    <param name="chatter_threshold" value="0.001" />
+    <param name="branch_threshold" value="0.0005" />
+    <param name="StartType" value="0" />
+    <param name="PlotType" value="0" />
+    <param name="output_filename" value="noname.out" />
+    <param name="SnapType" value="0" />
+    <param name="SnapTime" value="0.3" />
+    <param name="snapshot_filename" value="noname.snp" />
+    <param name="MrunType" value="0" />
+    <param name="Mruns" value="1" />
+    <param name="Scenario" value="" />
+    <param name="Advanced" value="4607" />
+    <param name="Options" value="16" />
+    <param name="Build" value="18" />
+    <param name="Warn" value="0" />
+    <param name="Check" value="0" />
+    <param name="description" value="" />
+    <param name="revisor" value="Qiuhua, 1410282551" />
+    <param name="architecture" value="windows" />
+    <param name="Source" value="" />
+    <param name="latency_count" value="100" />
+    <param name="Debug" value="0" />
+    <param name="startup_filename" value="" />
+    <param name="Preprocessor" value="" />
+  </paramlist>
+  <paramlist name="Validation" />
+  <hierarchy>
+    <call name="Station" link="675701448" z="-1" instance="-1" view="false">
+      <call name="Main" link="1961339060" z="-1" instance="-1" view="true">
+      </call>
+    </call>
+  </hierarchy>
+  <definitions>
+    <Definition classid="UserCmpDefn" name="PSCAD_SOCKET_COMP" group="" url="" version="" build="" crc="75882969" instances="0" key="" view="false" date="0">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration" visible="true">
+          <cond />
+          <parameter desc="Send Data Number" name="NDATA_S" group="" unit="" min="0" max="2147483647" content_type="Literal" type="Integer" helpmode="Append" intent="Input">
+            <value><![CDATA[0]]></value>
+            <cond />
+            <help><![CDATA[Number of elements in the send data vector]]></help>
+          </parameter>
+          <parameter desc="Receive Data Number" name="NDATA_R" group="" unit="" min="0" max="2147483647" content_type="Literal" type="Integer" helpmode="Append" intent="Input">
+            <value><![CDATA[0]]></value>
+            <cond />
+            <help><![CDATA[Number of elements in the Received data vector]]></help>
+          </parameter>
+          <parameter type="Integer" name="IP1" desc="IP Address (1)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP2" desc="IP Address (2)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP3" desc="IP Address (3)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP4" desc="IP Address (4)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="PORT" desc="IP Port Number" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="65535" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Real" name="DELAY" desc="Time Delay" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Real" name="STEP" desc="Time Step" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Transfer" name="SEND:NDATA_S" x="-72" y="0" dim="0" mode="Input" type="Real" internal="false"><![CDATA[true]]></port>
+        <port model="Transfer" name="RECV:NDATA_R" x="72" y="0" dim="0" mode="Output" type="Real" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-39" y="-40" width="78" height="78" stroke="black" stroke-width="0.2" stroke-dasharray="none" fill-style="Hollow" fill-fg="black" fill-bg="black" />
+        <text x="0" y="-18" stroke="black" font-size="Small" text-anchor="Middle"><![CDATA[SOCKET]]></text>
+        <line x1="-71" y1="0" x2="-39" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <line x1="-44" y1="-5" x2="-39" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <line x1="-44" y1="5" x2="-39" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <text x="-61" y="12" stroke="black" font-size="small" text-anchor="Middle">send</text>
+        <text x="54" y="13" stroke="black" font-size="small" text-anchor="Middle">recv</text>
+        <line x1="39" y1="0" x2="71" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <line x1="66" y1="-5" x2="71" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <line x1="66" y1="5" x2="71" y2="0" stroke="Black" stroke-width="0.2" stroke-dasharray="none" port="" />
+        <text x="1" y="11" stroke="Black" font-size="Small" text-anchor="Middle"><![CDATA[COMPONENT]]></text>
+      </svg>
+      <script>
+        <segment name="Fortran"><![CDATA[      IF (NINT(TIME/DELT) == NINT($DELAY/DELT)) THEN
+            CALL PSCAD_SEND_INIT($IP1,$IP2,$IP3,$IP4,$PORT,$SEND,$NDATA_S)
+      ELSEIF (TIME > $DELAY) THEN
+            IF (LASTSTEP) THEN
+                  CALL PSCAD_SEND_CLOSE()
+                  CALL PSCAD_RECV_CLOSE()
+            ELSEIF (MOD(NINT(TIME/DELT),NINT($STEP/DELT)) == 0) THEN
+                  CALL PSCAD_SEND_RECV($IP1,$IP2,$IP3,$IP4,$PORT,$SEND,$NDATA_S,$RECV,$NDATA_R)
+            ENDIF
+      ENDIF]]></segment>
+        <segment name="Branch"><![CDATA[]]></segment>
+        <segment name="Computations"><![CDATA[]]></segment>
+      </script>
+    </Definition>
+    <Definition classid="StationDefn" name="Station" group="" url="" version="" build="" crc="117194378" instances="1" view="false">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <schematic classid="StationCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <Wire classid="WireBranch" id="1961339060" name="pscad_socket:Main" x="180" y="180" w="62" h="80" orient="0" defn="pscad_socket:Main" recv="-1" send="-1" back="-1">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="54" y="54" />
+          <vertex x="54" y="72" />
+          <User classid="UserCmp" name="pscad_socket:Main" id="1961339060" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="pscad_socket:Main" link="1961339060" q="4">
+            <paramlist link="-1" name="" />
+          </User>
+        </Wire>
+      </schematic>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="array_merge" group="" url="" version="" build="" crc="20926210" instances="0" view="false" date="0">
+      <paramlist>
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <parameter type="Choice" name="NPORTS" desc="Number of Input Ports" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <regex />
+            <error_msg />
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Choice" name="NPORT1" desc="Number of Inputs (Port 1)" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <choice><![CDATA[6 = 6]]></choice>
+            <choice><![CDATA[7 = 7]]></choice>
+            <choice><![CDATA[8 = 8]]></choice>
+            <choice><![CDATA[9 = 9]]></choice>
+            <choice><![CDATA[10 = 10]]></choice>
+            <choice><![CDATA[11 = 11]]></choice>
+            <choice><![CDATA[12 = 12]]></choice>
+            <regex />
+            <error_msg />
+            <cond><![CDATA[NPORTS>=1]]></cond>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Choice" name="NPORT2" desc="Number of Inputs (Port 2)" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <choice><![CDATA[6 = 6]]></choice>
+            <choice><![CDATA[7 = 7]]></choice>
+            <choice><![CDATA[8 = 8]]></choice>
+            <choice><![CDATA[9 = 9]]></choice>
+            <choice><![CDATA[10 = 10]]></choice>
+            <choice><![CDATA[11 = 11]]></choice>
+            <choice><![CDATA[12 = 12]]></choice>
+            <regex />
+            <error_msg />
+            <cond><![CDATA[NPORTS>=2]]></cond>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Choice" name="NPORT3" desc="Number of Inputs (Port 3)" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <choice><![CDATA[6 = 6]]></choice>
+            <choice><![CDATA[7 = 7]]></choice>
+            <choice><![CDATA[8 = 8]]></choice>
+            <choice><![CDATA[9 = 9]]></choice>
+            <choice><![CDATA[10 = 10]]></choice>
+            <choice><![CDATA[11 = 11]]></choice>
+            <choice><![CDATA[12 = 12]]></choice>
+            <regex />
+            <error_msg />
+            <cond><![CDATA[NPORTS>=3]]></cond>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Choice" name="NPORT4" desc="Number of Inputs (Port 4)" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <choice><![CDATA[6 = 6]]></choice>
+            <choice><![CDATA[7 = 7]]></choice>
+            <choice><![CDATA[8 = 8]]></choice>
+            <choice><![CDATA[9 = 9]]></choice>
+            <choice><![CDATA[10 = 10]]></choice>
+            <choice><![CDATA[11 = 11]]></choice>
+            <choice><![CDATA[12 = 12]]></choice>
+            <regex />
+            <error_msg />
+            <cond><![CDATA[NPORTS>=4]]></cond>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Choice" name="NPORT5" desc="Number of Inputs (Port 5)" group="" helpmode="Append">
+            <value><![CDATA[1]]></value>
+            <choice><![CDATA[1 = 1]]></choice>
+            <choice><![CDATA[2 = 2]]></choice>
+            <choice><![CDATA[3 = 3]]></choice>
+            <choice><![CDATA[4 = 4]]></choice>
+            <choice><![CDATA[5 = 5]]></choice>
+            <choice><![CDATA[6 = 6]]></choice>
+            <choice><![CDATA[7 = 7]]></choice>
+            <choice><![CDATA[8 = 8]]></choice>
+            <choice><![CDATA[9 = 9]]></choice>
+            <choice><![CDATA[10 = 10]]></choice>
+            <choice><![CDATA[11 = 11]]></choice>
+            <choice><![CDATA[12 = 12]]></choice>
+            <regex />
+            <error_msg />
+            <cond><![CDATA[NPORTS>=5]]></cond>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="NDATA" desc="Number of Inputs (Total)" group="" helpmode="Append" content_type="Literal" intent="Input" min="1" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <port model="Transfer" name="IN1:NPORT1" x="-36" y="-90" dim="0" mode="Input" type="Real" internal=""><![CDATA[NPORTS>=1]]></port>
+        <port model="Transfer" name="IN2:NPORT2" x="-36" y="-72" dim="0" mode="Input" type="Real" internal=""><![CDATA[NPORTS>=2]]></port>
+        <port model="Transfer" name="IN3:NPORT3" x="-36" y="-54" dim="0" mode="Input" type="Real" internal=""><![CDATA[NPORTS>=3]]></port>
+        <port model="Transfer" name="IN4:NPORT4" x="-36" y="-36" dim="0" mode="Input" type="Real" internal=""><![CDATA[NPORTS>=4]]></port>
+        <port model="Transfer" name="IN5:NPORT5" x="-36" y="-18" dim="0" mode="Input" type="Real" internal=""><![CDATA[NPORTS>=5]]></port>
+        <port model="Transfer" name="OUT:NDATA" x="54" y="-54" dim="0" mode="Output" type="Real" internal=""><![CDATA[true]]></port>
+        <rect x="-21" y="-108" width="61" height="108" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="Black" fill-bg="" port="" />
+        <cond><![CDATA[NPORTS>=1]]></cond>
+        <line x1="-36" y1="-90" x2="-21" y2="-90" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="IN1:NPORT1" />
+        <text x="-40" y="-95" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[input1]]></text>
+        <cond><![CDATA[NPORTS>=2]]></cond>
+        <line x1="-36" y1="-72" x2="-21" y2="-72" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="IN2:NPORT2" />
+        <text x="-40" y="-77" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[input2]]></text>
+        <cond><![CDATA[NPORTS>=3]]></cond>
+        <line x1="-36" y1="-54" x2="-21" y2="-54" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="IN3:NPORT3" />
+        <text x="-40" y="-59" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[input3]]></text>
+        <cond><![CDATA[NPORTS>=4]]></cond>
+        <line x1="-36" y1="-36" x2="-21" y2="-36" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="IN4:NPORT4" />
+        <text x="-40" y="-41" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[input4]]></text>
+        <cond><![CDATA[NPORTS>=5]]></cond>
+        <line x1="-36" y1="-18" x2="-21" y2="-18" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="IN5:NPORT5" />
+        <text x="-40" y="-23" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[input5]]></text>
+        <cond><![CDATA[true]]></cond>
+        <line x1="54" y1="-54" x2="39" y2="-54" stroke="Black" stroke-dasharray="none" stroke-width="ByNode" port="OUT:NDATA" />
+        <text x="58" y="-59" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[output]]></text>
+        <text x="9" y="-58" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[array]]></text>
+        <text x="9" y="-42" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[merge]]></text>
+      </svg>
+      <script>
+        <segment name="Fortran"><![CDATA[#LOCAL INTEGER OUT_SIZE
+      OUT_SIZE = 0
+#IF $NPORTS >= 1
+      DO I = 1, $NPORT1
+            $OUT(I) = $IN1(I)
+      ENDDO
+      OUT_SIZE = OUT_SIZE + $NPORT1
+#ENDIF
+#IF $NPORTS >= 2
+      DO I = 1, $NPORT2
+            $OUT(I+OUT_SIZE) = $IN2(I)
+      ENDDO
+      OUT_SIZE = OUT_SIZE + $NPORT2
+#ENDIF
+#IF $NPORTS >= 3
+      DO I = 1, $NPORT3
+            $OUT(I+OUT_SIZE) = $IN3(I)
+      ENDDO
+      OUT_SIZE = OUT_SIZE + $NPORT3
+#ENDIF
+#IF $NPORTS >= 4
+      DO I = 1, $NPORT4
+            $OUT(I+OUT_SIZE) = $IN4(I)
+      ENDDO
+      OUT_SIZE = OUT_SIZE + $NPORT4
+#ENDIF
+#IF $NPORTS >= 5
+      DO I = 1, $NPORT5
+            $OUT(I+OUT_SIZE) = $IN5(I)
+      ENDDO
+      OUT_SIZE = OUT_SIZE + $NPORT5
+#ENDIF]]></segment>
+        <segment name="Branch"><![CDATA[]]></segment>
+        <segment name="Computations"><![CDATA[]]></segment>
+      </script>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="pscad_recv" group="" url="" version="" build="" crc="68878908" instances="0" view="false" date="0">
+      <paramlist>
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration">
+          <parameter type="Integer" name="NDATA" desc="Number of Outputs" group="" helpmode="Append" content_type="Literal" intent="Input" min="1" max="" unit="">
+            <value><![CDATA[1]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="IP1" desc="IP Address (1)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="IP2" desc="IP Address (2)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="IP3" desc="IP Address (3)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="IP4" desc="IP Address (4)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Integer" name="PORT" desc="Port Number" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="65535" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Real" name="DELAY" desc="Time Delay" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+          <parameter type="Real" name="STEP" desc="Time Step" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <port model="Transfer" name="DAT:NDATA" x="54" y="0" dim="0" mode="Output" type="Real" internal=""><![CDATA[true]]></port>
+        <port model="Transfer" name="INIT:NDATA" x="-54" y="0" dim="0" mode="Input" type="Real" internal=""><![CDATA[true]]></port>
+        <rect x="-39" y="-39" width="78" height="78" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="Black" fill-bg="" port="" />
+        <line x1="54" y1="0" x2="39" y2="0" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="DAT:NDATA" />
+        <text x="56" y="-6" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[data]]></text>
+        <text x="-1" y="3" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[pscad_recv]]></text>
+        <line x1="-54" y1="0" x2="-39" y2="0" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="DAT:NDATA" />
+        <text x="-55" y="-6" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[init]]></text>
+      </svg>
+      <script>
+        <segment name="Fortran"><![CDATA[      IF (TIMEZERO) THEN
+            DO I = 1, $NDATA
+                  $DAT(I) = $INIT(I)
+            ENDDO
+      ELSEIF (NINT(TIME/DELT) == NINT($DELAY/DELT)) THEN
+            CALL PSCAD_RECV_INIT($IP1,$IP2,$IP3,$IP4,$PORT)
+      ELSEIF (TIME > $DELAY) THEN
+            IF (LASTSTEP) THEN
+                  CALL PSCAD_RECV_CLOSE()
+            ELSEIF (MOD(NINT(TIME/DELT),NINT($STEP/DELT)) == 0) THEN
+                  CALL PSCAD_RECV($IP1,$IP2,$IP3,$IP4,$PORT,$DAT,$NDATA)
+            ENDIF
+      ENDIF]]></segment>
+        <segment name="Branch"><![CDATA[]]></segment>
+        <segment name="Computations"><![CDATA[]]></segment>
+      </script>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="pscad_send" group="" url="" version="" build="" crc="71452259" instances="1" view="false" date="0">
+      <paramlist>
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Configuration" visible="true">
+          <cond />
+          <parameter type="Integer" name="NDATA" desc="Number of Inputs" group="" helpmode="Append" content_type="Literal" intent="Input" min="1" max="" unit="">
+            <value><![CDATA[1]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP1" desc="IP Address (1)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP2" desc="IP Address (2)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP3" desc="IP Address (3)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="IP4" desc="IP Address (4)" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="255" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Integer" name="PORT" desc="IP Port Number" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="65535" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Real" name="DELAY" desc="Time Delay" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+          <parameter type="Real" name="STEP" desc="Time Step" group="" helpmode="Append" content_type="Literal" intent="Input" min="0" max="" unit="">
+            <value><![CDATA[]]></value>
+            <help><![CDATA[]]></help>
+            <cond />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+        </paramlist>
+        <port model="Transfer" name="DAT:NDATA" x="-54" y="0" dim="0" mode="Input" type="Real" internal="false"><![CDATA[true]]></port>
+        <cond><![CDATA[true]]></cond>
+        <rect x="-39" y="-39" width="78" height="78" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="Black" fill-bg="" port="" />
+        <text x="0" y="3" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[pscad_send]]></text>
+        <line x1="-54" y1="0" x2="-39" y2="0" stroke="Green" stroke-dasharray="none" stroke-width="ByNode" port="" />
+        <text x="-56" y="-6" stroke="Black" fill="Black" font-size="Small" text-anchor="Middle"><![CDATA[data]]></text>
+      </svg>
+      <script>
+        <segment name="Fortran"><![CDATA[      IF (NINT(TIME/DELT) == NINT($DELAY/DELT)) THEN
+            CALL PSCAD_SEND_INIT($IP1,$IP2,$IP3,$IP4,$PORT,$DAT,$NDATA)
+      ELSEIF (TIME > $DELAY) THEN
+            IF (LASTSTEP) THEN
+                  CALL PSCAD_SEND_CLOSE()
+            ELSEIF (MOD(NINT(TIME/DELT),NINT($STEP/DELT)) == 0) THEN
+                  CALL PSCAD_SEND($IP1,$IP2,$IP3,$IP4,$PORT,$DAT,$NDATA)
+            ENDIF
+      ENDIF]]></segment>
+        <segment name="Branch"><![CDATA[]]></segment>
+        <segment name="Computations"><![CDATA[]]></segment>
+      </script>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="Main" group="" url="" version="" build="" crc="67704800" instances="1" view="false" date="0">
+      <paramlist>
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Global Substitutions" />
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <rect x="-18" y="-18" width="36" height="36" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="Black" fill-bg="" port="" />
+      </svg>
+      <script />
+      <schematic classid="UserCanvas" zoomlevel="6" scrollx="0" scrolly="0">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="pscad_socket:array_merge" defn="pscad_socket:array_merge" id="878495597" x="162" y="342" w="136" h="110" z="0" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="NPORTS" value="1" />
+            <param name="NPORT1" value="1" />
+            <param name="NPORT2" value="1" />
+            <param name="NPORT3" value="1" />
+            <param name="NPORT4" value="1" />
+            <param name="NPORT5" value="1" />
+            <param name="NDATA" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="pscad_socket:pscad_recv" defn="pscad_socket:pscad_recv" id="1171143078" x="432" y="288" w="133" h="80" z="0" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="NDATA" value="1" />
+            <param name="IP1" value="0" />
+            <param name="IP2" value="0" />
+            <param name="IP3" value="0" />
+            <param name="IP4" value="0" />
+            <param name="PORT" value="0" />
+            <param name="DELAY" value="0" />
+            <param name="STEP" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="pscad_socket:pscad_send" defn="pscad_socket:pscad_send" id="877518539" x="648" y="288" w="109" h="80" z="0" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="NDATA" value="2" />
+            <param name="IP1" value="0" />
+            <param name="IP2" value="0" />
+            <param name="IP3" value="0" />
+            <param name="IP4" value="0" />
+            <param name="PORT" value="0" />
+            <param name="DELAY" value="0" />
+            <param name="STEP" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="pscad_socket:PSCAD_SOCKET_COMP" id="299602624" x="342" y="126" w="147" h="80" z="0" orient="0" defn="pscad_socket:PSCAD_SOCKET_COMP" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="NDATA_S" value="0" />
+            <param name="NDATA_R" value="0" />
+            <param name="IP1" value="0" />
+            <param name="IP2" value="0" />
+            <param name="IP3" value="0" />
+            <param name="IP4" value="0" />
+            <param name="PORT" value="0" />
+            <param name="DELAY" value="0" />
+            <param name="STEP" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+    </Definition>
+  </definitions>
+  <paramlist name="Libs">
+    <param name="0" value="E:\Dropbox\PhD project\pscad\pscad_socket\pscad_socket.gf42\pscad_socket.lib" />
+  </paramlist>
+</project>
