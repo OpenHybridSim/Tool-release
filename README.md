@@ -1,7 +1,7 @@
 # release
-Host the release of the OpenHybridSim tool
+OpenHybridsiM (OHM) is an open source tool for EMT-TS hybrid simulation, which is also the first publically available tool for hybrid simulation. An nterface with PSCAD/EMTDC has been developed, while the interface with Matlab/Simulink SimPowerSysmtes is under going the final stage of development as of January 2015.
 
-The tool is distributed as a executable Jar lib. To use the tool, please first download the jar from https://github.com/OpenHybridSim/OHM-release/blob/master/hybridSimu_X.jar, where X stands for the version
+The tool is distributed as an executable Jar lib. To use the tool, please first download the jar from https://github.com/OpenHybridSim/OHM-release/blob/master/hybridSimu_X.jar, where X stands for the version
 
 To run the tool, just double-click the jar file, and the GUI should show up in a second.
 
