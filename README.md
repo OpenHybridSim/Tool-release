@@ -10,4 +10,4 @@ To run the tool, just double-click the jar file, and the GUI should show up in a
 The user guide and examples are provided in the wiki page
 https://github.com/OpenHybridSim/OHM-release/wiki
 
-For any help or feedback, please contact with the author via email: qhuang24 AT ASU DOT edu
+For any help or feedback, please contact with the author via email: OpenHybridSim AT gmail dot com
