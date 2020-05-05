@@ -14,4 +14,28 @@ https://github.com/OpenHybridSim/OHM-release/wiki
 
 The source code of the project is available from: https://github.com/OpenHybridSim/OpenHybridSim-code
 
-For any help or feedback, please contact with us via email: OpenHybridSim AT gmail dot com 
+## References
+If you use or reference this tool for your work, please cite the following papers:
+```
+@ARTICLE{huang2016hyridsimFIDVR,
+  author={Q. {Huang} and V. {Vittal}},
+  journal={IEEE Transactions on Power Systems}, 
+  title={Application of Electromagnetic Transient-Transient Stability Hybrid Simulation to FIDVR Study}, 
+  year={2016},
+  volume={31},
+  number={4},
+  pages={2634-2646},}
+ ```
+ ```
+ @inproceedings{huang2016openhybridsim,
+  title={OpenHybridSim: An open source tool for EMT and phasor domain hybrid simulation},
+  author={Huang, Qiuhua and Vittal, Vijay},
+  booktitle={2016 IEEE Power and Energy Society General Meeting (PESGM)},
+  pages={1--5},
+  year={2016},
+  organization={IEEE}
+}
+```
+
+## Contact
+For any help or feedback, please contact with us via email: qiuhua dot huang AT asu dot edu
